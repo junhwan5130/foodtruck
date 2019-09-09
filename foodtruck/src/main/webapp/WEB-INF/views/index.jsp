@@ -15,17 +15,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- Bootstrap Core CSS -->
-<link type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link type="text/css" href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 
 <!-- Custom CSS -->
-<link type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" rel='stylesheet' type='text/css' />
+<link type="text/css" href="css/style.css" rel='stylesheet' type='text/css' />
 
 <!-- font-awesome icons CSS -->
-<link type="text/css" href="${pageContext.request.contextPath}/resources/css/font-awesome.css" rel="stylesheet"> 
+<link type="text/css" href="css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons CSS-->
 
 <!-- side nav css file -->
-<link type="text/css" href="${pageContext.request.contextPath}/resources/SidebarNav.min.css" media='all' rel='stylesheet' type='text/css'/>
+<link type="text/css" href="css/SidebarNav.min.css" media='all' rel='stylesheet' type='text/css'/>
 <!-- //side nav css file -->
  
  <!-- js-->
@@ -43,7 +43,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- Metis Menu -->
 <script src="js/metisMenu.min.js"></script>
 <script src="js/custom.js"></script>
-<link href="${pageContext.request.contextPath}/resources/css/custom.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
 <!--//Metis Menu -->
 <style>
 #chartdiv {
@@ -93,7 +93,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
 
 	<!-- requried-jsfiles-for owl -->
-					<link href="${pageContext.request.contextPath}/resources/css/owl.carousel.css" rel="stylesheet">
+					<link href="css/owl.carousel.css" rel="stylesheet">
 					<script src="js/owl.carousel.js"></script>
 						<script>
 							$(document).ready(function() {
@@ -121,13 +121,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> Glance<span class="dashboard_text">Design dashboard</span></a></h1>
+            <h1><a class="navbar-brand" href="/app"><span class="fa fa-area-chart"></span> Glance<span class="dashboard_text">Design dashboard</span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
               <li class="header">MAIN NAVIGATION</li>
               <li class="treeview">
-                <a href="index.html">
+                <a href="/app">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
               </li>
@@ -203,8 +203,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="login.html"><i class="fa fa-angle-right"></i> Login</a></li>
-                  <li><a href="signup.html"><i class="fa fa-angle-right"></i> Register</a></li>
+                  <li><a href="login"><i class="fa fa-angle-right"></i> Login</a></li>
+                  <li><a href="signup"><i class="fa fa-angle-right"></i> Register</a></li>
                   <li><a href="404.html"><i class="fa fa-angle-right"></i> 404 Error</a></li>
                   <li><a href="500.html"><i class="fa fa-angle-right"></i> 500 Error</a></li>
                   <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
@@ -588,7 +588,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<script src="js/amcharts.js"></script>
 			<script src="js/serial.js"></script>
 			<script src="js/export.min.js"></script>
-			<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/export.css" type="text/css" media="all" />
+			<link rel="stylesheet" href="css/export.css" type="text/css" media="all" />
 			<script src="js/light.js"></script>
 	<!-- for amcharts js -->
 

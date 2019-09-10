@@ -29,4 +29,10 @@ public class HomeController {
 		return "login";
 	}
 	
+	@RequestMapping(value = "/404", method = RequestMethod.GET)
+	public String go404() {
+		
+		return "404";
+	}
+	
 }

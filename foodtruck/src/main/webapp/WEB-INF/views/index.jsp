@@ -138,12 +138,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="grids.html"><i class="fa fa-angle-right"></i> Grids</a></li>
-                  <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
+                  <li><a href="grids"><i class="fa fa-angle-right"></i> Grids</a></li>
+                  <li><a href="media"><i class="fa fa-angle-right"></i> Media Css</a></li>
+                  <li><a href="crawling.do"><i class="fa fa-angle-right"></i> Crawling</a></li>
                 </ul>
               </li>
               <li class="treeview">
-                <a href="charts.html">
+                <a href="charts">
                 <i class="fa fa-pie-chart"></i>
                 <span>Charts</span>
                 <span class="label label-primary pull-right">new</span>
@@ -157,14 +158,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
-                  <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
-                  <li><a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
-                  <li><a href="typography.html"><i class="fa fa-angle-right"></i> Typography</a></li>
+                  <li><a href="general"><i class="fa fa-angle-right"></i> General</a></li>
+                  <li><a href="icons"><i class="fa fa-angle-right"></i> Icons</a></li>
+                  <li><a href="buttons"><i class="fa fa-angle-right"></i> Buttons</a></li>
+                  <li><a href="typography"><i class="fa fa-angle-right"></i> Typography</a></li>
                 </ul>
               </li>
 			  <li>
-                <a href="widgets.html">
+                <a href="widgets">
                 <i class="fa fa-th"></i> <span>Widgets</span>
                 <small class="label pull-right label-info">08</small>
                 </a>
@@ -175,8 +176,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="forms.html"><i class="fa fa-angle-right"></i> General Forms</a></li>
-                  <li><a href="validation.html"><i class="fa fa-angle-right"></i> Form Validations</a></li>
+                  <li><a href="forms"><i class="fa fa-angle-right"></i> General Forms</a></li>
+                  <li><a href="validation"><i class="fa fa-angle-right"></i> Form Validations</a></li>
                 </ul>
               </li>
               <li class="treeview">
@@ -185,7 +186,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="tables.html"><i class="fa fa-angle-right"></i> Simple tables</a></li>
+                  <li><a href="tables"><i class="fa fa-angle-right"></i> Simple tables</a></li>
                 </ul>
               </li>
               <li class="treeview">
@@ -193,8 +194,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-envelope"></i> <span>Mailbox </span>
                 <i class="fa fa-angle-left pull-right"></i><small class="label pull-right label-info1">08</small><span class="label label-primary1 pull-right">02</span></a>
                 <ul class="treeview-menu">
-                  <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
-                  <li><a href="compose.html"><i class="fa fa-angle-right"></i> Compose Mail </a></li>
+                  <li><a href="inbox"><i class="fa fa-angle-right"></i> Mail Inbox </a></li>
+                  <li><a href="compose"><i class="fa fa-angle-right"></i> Compose Mail </a></li>
                 </ul>
               </li>
               <li class="treeview">
@@ -206,8 +207,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                   <li><a href="login"><i class="fa fa-angle-right"></i> Login</a></li>
                   <li><a href="signup"><i class="fa fa-angle-right"></i> Register</a></li>
                   <li><a href="404"><i class="fa fa-angle-right"></i> 404 Error</a></li>
-                  <li><a href="500.html"><i class="fa fa-angle-right"></i> 500 Error</a></li>
-                  <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
+                  <li><a href="500"><i class="fa fa-angle-right"></i> 500 Error</a></li>
+                  <li><a href="blank-page"><i class="fa fa-angle-right"></i> Blank Page</a></li>
                 </ul>
               </li>
               <li class="header">LABELS</li>

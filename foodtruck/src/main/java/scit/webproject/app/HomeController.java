@@ -1,5 +1,7 @@
 package scit.webproject.app;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,4 +37,18 @@ public class HomeController {
 		return "404";
 	}
 	
+	@RequestMapping(value = "crawling.do")
+	public String crawling() throws Exception {
+		
+		String url = "https://sports.news.naver.com/kbaseball/index.nhn";
+		System.out.println("==============================");
+		System.out.println("url : " + url);
+		
+		Document doc = Jsoup.connect(url).get();
+		
+		System.out.println(doc.toString());
+		
+		
+		return "{\"1\":\"1\"}";
+	}
 }

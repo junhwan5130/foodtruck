@@ -37,6 +37,96 @@ public class HomeController {
 		return "404";
 	}
 	
+	@RequestMapping(value = "/500", method = RequestMethod.GET)
+	public String go505() {
+		
+		return "500";
+	}
+	
+	@RequestMapping(value = "/blank-page", method = RequestMethod.GET)
+	public String blankpage() {
+		
+		return "blank-page";
+	}
+	
+	@RequestMapping(value = "/buttons", method = RequestMethod.GET)
+	public String buttons() {
+		
+		return "buttons";
+	}
+	
+	@RequestMapping(value = "/charts", method = RequestMethod.GET)
+	public String charts() {
+		
+		return "charts";
+	}
+	
+	@RequestMapping(value = "/compose", method = RequestMethod.GET)
+	public String compose() {
+		
+		return "compose";
+	}
+	
+	@RequestMapping(value = "/forms", method = RequestMethod.GET)
+	public String forms() {
+		
+		return "forms";
+	}
+	
+	@RequestMapping(value = "/general", method = RequestMethod.GET)
+	public String general() {
+		
+		return "general";
+	}
+	
+	@RequestMapping(value = "/grids", method = RequestMethod.GET)
+	public String grids() {
+		
+		return "grids";
+	}
+	
+	@RequestMapping(value = "/icons", method = RequestMethod.GET)
+	public String icons() {
+		
+		return "icons";
+	}
+	
+	@RequestMapping(value = "/inbox", method = RequestMethod.GET)
+	public String inbox() {
+		
+		return "inbox";
+	}
+	
+	@RequestMapping(value = "/media", method = RequestMethod.GET)
+	public String media() {
+		
+		return "media";
+	}
+	
+	@RequestMapping(value = "/tables", method = RequestMethod.GET)
+	public String tables() {
+		
+		return "tables";
+	}
+	
+	@RequestMapping(value = "/typography", method = RequestMethod.GET)
+	public String typography() {
+		
+		return "typography";
+	}
+	
+	@RequestMapping(value = "/validation", method = RequestMethod.GET)
+	public String validation() {
+		
+		return "validation";
+	}
+	
+	@RequestMapping(value = "/widgets", method = RequestMethod.GET)
+	public String widgets() {
+		
+		return "widgets";
+	}
+	
 	@RequestMapping(value = "crawling.do")
 	public String crawling() throws Exception {
 		

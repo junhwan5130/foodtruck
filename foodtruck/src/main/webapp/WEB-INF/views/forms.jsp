@@ -148,6 +148,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
               <li><a href="#"><i class="fa fa-angle-right text-red"></i> <span>Important</span></a></li>
               <li><a href="#"><i class="fa fa-angle-right text-yellow"></i> <span>Warning</span></a></li>
               <li><a href="#"><i class="fa fa-angle-right text-aqua"></i> <span>Information</span></a></li>
+			  <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>OrderManagement</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="OrderRegist"><i class="fa fa-angle-right"></i> OrderRegist</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->

@@ -128,6 +128,11 @@ public class GotoController {
 		return "login";
 	}
 	
+	@RequestMapping(value = "/OrderRegist", method = RequestMethod.GET)
+	public String OrderRegist() {
+		return "OrderRegist";
+	}
+	
 	
 	//crawling part
 	@RequestMapping(value = "crawling.do")

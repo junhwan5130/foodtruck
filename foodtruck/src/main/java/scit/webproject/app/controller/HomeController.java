@@ -1,4 +1,4 @@
-package scit.webproject.app;
+package scit.webproject.app.controller;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,7 +18,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() {
 				
-		return "login";
+		return "login1";
 	}
 
 	

@@ -7,6 +7,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+</script>
+
 <title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Login Page :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,9 +49,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 </head> 
 <body class="cbp-spmenu-push">
-<div class="main-content">
+<!-- <div class="main-content">
 	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-		<!--left-fixed -navigation-->
+		left-fixed -navigation
 		<aside class="sidebar-left">
       <nav class="navbar navbar-inverse">
           <div class="navbar-header">
@@ -160,19 +165,19 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
               </li>
             </ul>
           </div>
-          <!-- /.navbar-collapse -->
+          /.navbar-collapse
       </nav>
     </aside>
 	</div>
-		<!--left-fixed -navigation-->		
-		<!-- header-starts -->
+		left-fixed -navigation		
+		header-starts
 		<div class="sticky-header header-section ">
 			<div class="header-left">
 				
-				<!--toggle button start-->
+				toggle button start
 				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
-				<!--toggle button end-->
-				<div class="profile_details_left"><!--notifications of menu start -->
+				toggle button end
+				<div class="profile_details_left">notifications of menu start
 					<ul class="nofitications-dropdown">
 						<li class="dropdown head-dpdn">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">4</span></a>
@@ -306,13 +311,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<div class="clearfix"> </div>
 				</div>
-				<!--notification menu end -->
+				notification menu end
 				<div class="clearfix"> </div>
 			</div>
 			<div class="header-right">
 				
 				
-				<!--search-box-->
+				search-box
 				<div class="search-box">
 					<form class="input">
 						<input class="sb-search-input input__field--madoka" placeholder="Search..." type="search" id="input-31" />
@@ -322,7 +327,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</svg>
 						</label>
 					</form>
-				</div><!--//end-search-box-->
+				</div>//end-search-box
 				
 				<div class="profile_details">		
 					<ul>
@@ -351,7 +356,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>				
 			</div>
 			<div class="clearfix"> </div>	
-		</div>
+		</div> -->
 		<!-- //header-ends -->
 		<!-- main content start-->
 		<div id="page-wrapper">
@@ -359,11 +364,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<h2 class="title1">Login</h2>
 				<div class="widget-shadow">
 					<div class="login-body">
+					
+					
+					
 						<form action="#" method="post">
-							<input type="email" class="user" name="email" placeholder="Enter Your Email" required="">
+							<input type="email" class="user" name="email" placeholder="Enter Your ID" required="">
 							<input type="password" name="password" class="lock" placeholder="Password" required="">
 							<div class="forgot-grid">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Remember me</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>admin</label>
 								<div class="forgot">
 									<a href="#">forgot password?</a>
 								</div>
@@ -377,6 +385,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								</a>
 							</div>
 						</form>
+						
+						
+						
 					</div>
 				</div>
 				

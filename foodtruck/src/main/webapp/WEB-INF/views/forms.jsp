@@ -56,7 +56,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index"><span class="fa fa-area-chart"></span> Glance<span class="dashboard_text">Design Dashboard</span></a>
+            <a class="navbar-brand" href="index"><span class="fa fa-area-chart"></span> Food Truck <span class="dashboard_text">Management System</span></a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -357,41 +357,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div id="page-wrapper">
 			<div class="main-page">
 				<div class="forms">
-					<h2 class="title1">Forms</h2>
+					<h2 class="title1">Purchase Order Forms</h2> <!-- 발주서 입력 -->
 					<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 						<div class="form-title">
-							<h4>Basic Form :</h4>
+							<h4>Purchase Order Lists :</h4>
 						</div>
 						<div class="form-body">
-							<form> <div class="form-group"> <label for="exampleInputEmail1">Email address</label> <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> </div> <div class="form-group"> <label for="exampleInputPassword1">Password</label> <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> </div> <div class="form-group"> <label for="exampleInputFile">File input</label> <input type="file" id="exampleInputFile"> <p class="help-block">Example block-level help text here.</p> </div> <div class="checkbox"> <label> <input type="checkbox"> Check me out </label> </div> <button type="submit" class="btn btn-default">Submit</button> </form> 
+							<form> <button type="button" id="formsubmitbutton" class="btn btn-default">Need to Add Paging</button> </form> 
 						</div>
 					</div>
-					<div class=" form-grids row form-grids-right">
-						<div class="widget-shadow " data-example-id="basic-forms"> 
-							<div class="form-title">
-								<h4>Horizontal form :</h4>
-							</div>
-							<div class="form-body">
-								<form class="form-horizontal"> <div class="form-group"> <label for="inputEmail3" class="col-sm-2 control-label">Email</label> <div class="col-sm-9"> <input type="email" class="form-control" id="inputEmail3" placeholder="Email"> </div> </div> <div class="form-group"> <label for="inputPassword3" class="col-sm-2 control-label">Password</label> <div class="col-sm-9"> <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> </div> </div> <div class="form-group"> <div class="col-sm-offset-2 col-sm-10"> <div class="checkbox"> <label> <input type="checkbox"> Remember me </label> </div> </div> </div> <div class="col-sm-offset-2"> <button type="submit" class="btn btn-default">Sign in</button> </div> </form> 
-							</div>
-						</div>
-					</div>
-					<div class="inline-form widget-shadow">
-						<div class="form-title">
-							<h4>Inline form Example 1 :</h4>
-						</div>
-						<div class="form-body">
-							<div data-example-id="simple-form-inline"> <form class="form-inline"> <div class="form-group"> <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email"> </div> <div class="form-group"> <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"> </div> <div class="checkbox"> <label> <input type="checkbox"> Remember me </label> </div> <button type="submit" class="btn btn-default">Sign in</button> </form> </div>
-						</div>
-					</div>
-					<div class="form-two widget-shadow">
-						<div class="form-title">
-							<h4>Inline form Example 2 :</h4>
-						</div>
-						<div class="form-body" data-example-id="simple-form-inline">
-							<form class="form-inline"> <div class="form-group"> <label for="exampleInputName2">Name</label> <input type="text" class="form-control" id="exampleInputName2" placeholder="Your name"> </div> <div class="form-group"> <label for="exampleInputEmail2">Email</label> <input type="email" class="form-control" id="exampleInputEmail2" placeholder="mail.abc@example.com"> </div> <button type="submit" class="btn btn-default">Send invitation</button> </form> 
-						</div>
-					</div>
+					
 					<div class="row">
 						<h3 class="title1">General Form :</h3>
 						<div class="form-three widget-shadow">
@@ -499,167 +474,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</form>
 						</div>
 					</div>
-					<div class="row">
-						<h3 class="title1">Variable Forms :</h3>
-						<div class="form-three widget-shadow">
-							<div data-example-id="form-validation-states-with-icons"> <form> <div class="form-group has-success has-feedback"> <label class="control-label" for="inputSuccess2">Input with success</label> <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status"> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span> <span id="inputSuccess2Status" class="sr-only">(success)</span> </div> <div class="form-group has-warning has-feedback"> <label class="control-label" for="inputWarning2">Input with warning</label> <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status"> <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span> <span id="inputWarning2Status" class="sr-only">(warning)</span> </div> <div class="form-group has-error has-feedback"> <label class="control-label" for="inputError2">Input with error</label> <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status"> <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span> <span id="inputError2Status" class="sr-only">(error)</span> </div> <div class="form-group has-success has-feedback"> <label class="control-label" for="inputGroupSuccess1">Input group with success</label> <div class="input-group"> <span class="input-group-addon">@</span> <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"> </div> <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span> <span id="inputGroupSuccess1Status" class="sr-only">(success)</span> </div> </form> </div>
-						</div>
-						<div class="form-three widget-shadow">
-							<div class=" panel-body-inputin">
-								<form class="form-horizontal">
-									<div class="form-group">
-										<label class="col-md-2 control-label">Email Address</label>
-										<div class="col-md-8">
-											<div class="input-group">							
-												<span class="input-group-addon">
-													<i class="fa fa-envelope-o"></i>
-												</span>
-												<input type="text" class="form-control1" placeholder="Email Address">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Password</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<span class="input-group-addon">
-													<i class="fa fa-key"></i>
-												</span>
-												<input type="password" class="form-control1" id="exampleInputPassword1" placeholder="Password">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Email Address</label>
-										<div class="col-md-8">
-											<div class="input-group input-icon right">
-												<span class="input-group-addon">
-													<i class="fa fa-envelope-o"></i>
-												</span>
-												<input id="email" class="form-control1" type="text" placeholder="Email Address">
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">With tooltip</p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Password</label>
-										<div class="col-md-8">
-											<div class="input-group input-icon right">
-												<span class="input-group-addon">
-													<i class="fa fa-key"></i>
-												</span>
-												<input type="password" class="form-control1" placeholder="Password">
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">With tooltip</p>
-										</div>
-									</div>
-									<div class="form-group has-success">
-										<label class="col-md-2 control-label">Input Addon Success</label>
-										<div class="col-md-8">
-											<div class="input-group input-icon right">
-												<span class="input-group-addon">
-													<i class="fa fa-envelope-o"></i>
-												</span>
-												<input id="email" class="form-control1" type="text" placeholder="Email Address">
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">Email is valid!</p>
-										</div>
-									</div>
-									<div class="form-group has-error">
-										<label class="col-md-2 control-label">Input Addon Error</label>
-										<div class="col-md-8">
-											<div class="input-group input-icon right">
-												<span class="input-group-addon">
-													<i class="fa fa-key"></i>
-												</span>
-												<input type="password" class="form-control1" placeholder="Password">
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">Error!</p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Checkbox Addon</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<div class="input-group-addon"><input type="checkbox"></div>
-												<input type="text" class="form-control1">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Checkbox Addon</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<input type="text" class="form-control1">
-												<div class="input-group-addon"><input type="checkbox"></div>
-												
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">Checkbox on right</p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Radio Addon</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<div class="input-group-addon"><input type="radio"></div>
-												<input type="text" class="form-control1">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Radio Addon</label>
-										<div class="col-md-8">
-											<div class="input-group">
-												<input type="text" class="form-control1">
-												<div class="input-group-addon"><input type="radio"></div>
-												
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">Radio on right</p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Input Processing</label>
-										<div class="col-md-8">
-											<div class="input-icon right spinner">
-												<i class="fa fa-fw fa-spin fa-spinner"></i>
-												<input id="email" class="form-control1" type="text" placeholder="Processing...">
-											</div>
-										</div>
-										<div class="col-sm-2">
-											<p class="help-block">Processing right</p>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-2 control-label">Static Paragraph</label>
-										<div class="col-md-8">
-											<p class="form-control1 m-n">email@example.com</p>
-										</div>
-									</div>
-									<div class="form-group mb-n">
-										<label class="col-md-2 control-label">Readonly</label>
-										<div class="col-md-8">
-											<input type="text" class="form-control1" placeholder="Readonly" readonly="">
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					
 		<!--footer-->
 		<div class="footer">
 		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>

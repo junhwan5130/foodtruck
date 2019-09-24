@@ -215,6 +215,46 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
               <li><a href="#"><i class="fa fa-angle-right text-red"></i> <span>Important</span></a></li>
               <li><a href="#"><i class="fa fa-angle-right text-yellow"></i> <span>Warning</span></a></li>
               <li><a href="#"><i class="fa fa-angle-right text-aqua"></i> <span>Information</span></a></li>
+              <!-- 프로젝트 메뉴 -->
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Order Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="OrderRegist"><i class="fa fa-angle-right"></i>Order Regist</a></li>
+                </ul>
+               </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Sale Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="SaleRegist"><i class="fa fa-angle-right"></i>Sale Regist</a></li>
+                  <li><a href="SaleSelect"><i class="fa fa-angle-right"></i>Sale Select</a></li>
+                </ul>
+               </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Employee Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="EmployeeRegist"><i class="fa fa-angle-right"></i>Employee Regist</a></li>
+                  <li><a href="EmployeeSelect"><i class="fa fa-angle-right"></i>Employee Select</a></li>
+                </ul>
+               </li>
+                <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Customer Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="CustomerRegist"><i class="fa fa-angle-right"></i>Customer Regist</a></li>
+                  <li><a href="CustomerSelect"><i class="fa fa-angle-right"></i>Customer Select</a></li>
+                </ul>
+               </li>        
             </ul>
           </div>
           <!-- /.navbar-collapse -->

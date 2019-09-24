@@ -133,6 +133,33 @@ public class GotoController {
 		return "OrderRegist";
 	}
 	
+	@RequestMapping(value = "/OrderSelect", method = RequestMethod.GET)
+	public String OrderSelect() {
+		return "OrderSelect";
+	}
+	
+	@RequestMapping(value = "/SaleRegist", method = RequestMethod.GET)
+	public String GoSaleRegist() {
+		return "SaleRegist";
+	}
+	
+	@RequestMapping(value = "/SaleSelect", method = RequestMethod.GET)
+	public String GoSaleSelect() {
+		return "SaleSelect";
+	}
+	
+	@RequestMapping(value = "/CustomerRegist", method = RequestMethod.GET)
+	public String GoCustomerRegist() {
+		return "CustomerRegist";
+	}
+	
+	@RequestMapping(value = "/CustomerSelect", method = RequestMethod.GET)
+	public String GoCustomerSelect() {
+		return "CustomerSelect";
+	}
+	
+	
+	
 	
 	//crawling part
 	@RequestMapping(value = "crawling.do")

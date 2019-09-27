@@ -5,9 +5,15 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="OrderRegistVO" type="food.truck.vo.OrderRegistVO" /> 
+		<typeAlias alias="CookingMaterialVO" type="food.truck.vo.CookingMaterialVO" /> 
+		
 	</typeAliases>
+	
 	<mappers>
+	
 	<mapper resource="mapper/OrderRegistMapper.xml" />
+	<mapper resource="mapper/CookingMaterialMapper.xml" />
+	
 	</mappers>
 </configuration>
 

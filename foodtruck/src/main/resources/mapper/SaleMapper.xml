@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="scit.webproject.app.repo.SaleMapper">
+	<insert id="insertSale" parameterType="Sale">
+	
+		INSERT INTO SALE
+		(
+			SALE_ID,
+			SALE_DATE,
+			SALE_POINT,
+			SALE_CARD,
+			SALE_CASH,
+			MENU_NAME,
+			MENU_AMOUNT,
+			MENU_ID,
+			EMP_ID,
+			EMP_NAME
+		)
+		VALUES
+		(
+			SALE_SEQ.NEXTVAL
+			,#{payDate}
+			,#{pointValue}
+			,#{cardValue}
+			,#{cashValue}
+			,#{menuName}
+			,#{menuCount}
+			,#{menu_Id}
+			,#{memberNo}
+			,#{memberName}
+		)
+	</insert>
+	<select id="selectSaleMenu" parameterType="Sale" resultType="Sale">
+		SELECT
+			MENU_ID
+			,MENU_PRICE
+		FROM
+			MENU
+		WHERE
+			MENU_NAME = #{menuName}
+	</select>
+
+</mapper>

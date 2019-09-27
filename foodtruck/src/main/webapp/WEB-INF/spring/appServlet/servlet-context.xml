@@ -25,7 +25,6 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="scit.webproject.app" />
-	
-	
+	<context:annotation-config />
 	
 </beans:beans>

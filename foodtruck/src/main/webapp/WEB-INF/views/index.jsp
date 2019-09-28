@@ -404,8 +404,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<div class="profile_img">	
 									<span class="prfil-img"><img src="images/2.jpg" alt=""> </span> 
 									<div class="user-name">
-										<p>Admin Name</p>
-										<span>Administrator</span>
+										<p>${username}</p>
+										<span>${userposition}</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>

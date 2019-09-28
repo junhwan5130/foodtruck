@@ -5,9 +5,10 @@
 <configuration>
  	<typeAliases>
 		<typeAlias type="scit.webproject.app.dto.Employees" alias="Employees" />
-		
+		<typeAlias type="scit.webproject.app.dto.Materials" alias="Materials" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/EmployeesMapper.xml" />
+		<mapper resource="mapper/MaterialsMapper.xml" />
 	</mappers>
 </configuration>

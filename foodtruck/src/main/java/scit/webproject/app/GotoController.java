@@ -1,13 +1,22 @@
 package scit.webproject.app;
 
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import scit.webproject.app.dao.OrderRegistDAO;
+
 @Controller
 public class GotoController {
+	
+	@Autowired
+	OrderRegistDAO dao;
+
+	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index() {
 				
@@ -130,7 +139,7 @@ public class GotoController {
 	
 	@RequestMapping(value = "/OrderRegist", method = RequestMethod.GET)
 	public String OrderRegist() {
-		return "OrderRegist";
+		return "redirect:/selectAllCM";
 	}
 	
 	

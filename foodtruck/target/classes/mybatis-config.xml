@@ -4,8 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="OrderRegistVO" type="food.truck.vo.OrderRegistVO" /> 
-		<typeAlias alias="CookingMaterialVO" type="food.truck.vo.CookingMaterialVO" /> 
+		<typeAlias alias="OrderRegistVO" type="scit.webproject.app.vo.OrderRegistVO" /> 
+		<typeAlias alias="CMVO" type="scit.webproject.app.vo.CookingMaterialVO" /> 
 		
 	</typeAliases>
 	

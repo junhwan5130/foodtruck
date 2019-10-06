@@ -60,10 +60,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
-              <li class="header">MAIN NAVIGATION</li>
+              <li class="header">MAIN NAVIGATION </li>
+             
+                                    
               <li class="treeview">
                 <a href="index">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <i class="fa fa-dashboard"></i> 
+                <span>Dashboard</span>
                 </a>
               </li>
 			  <li class="treeview">
@@ -129,6 +132,19 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <ul class="treeview-menu">
                   <li><a href="inbox"><i class="fa fa-angle-right"></i> Mail Inbox</a></li>
                   <li><a href="compose"><i class="fa fa-angle-right"></i> Compose Mail </a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Materials</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="general"><i class="fa fa-angle-right"></i> General</a></li>
+                  <li><a href="icons"><i class="fa fa-angle-right"></i> Icons</a></li>
+                  <li><a href="buttons"><i class="fa fa-angle-right"></i> Buttons</a></li>
+                  <li><a href="typography"><i class="fa fa-angle-right"></i> Typography</a></li>
                 </ul>
               </li>
               <li class="treeview">

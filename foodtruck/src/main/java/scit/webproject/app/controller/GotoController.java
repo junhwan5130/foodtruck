@@ -11,7 +11,7 @@ public class GotoController {
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index() {
 				
-		return "index";
+		return "index1";
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)

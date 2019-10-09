@@ -145,7 +145,7 @@ public class GotoController {
 	
 	@RequestMapping(value = "/SaleSelect", method = RequestMethod.GET)
 	public String GoSaleSelect() {
-		return "SaleSelect";
+		return "redirect:/selectAllSale";
 	}
 	
 	@RequestMapping(value = "/CustomerRegist", method = RequestMethod.GET)

@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,18 +26,29 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		$("#cashValue").on("blur",function(){
 			cashCard();
 		});
+		$("#inputTempTable").on("click",function(){
+			inputTempTable();
+		});
+		$("#SaleDBRegist").on("click",function(){
+			submitAll();
+		});
+		$("#SaleAllDelete").on("click",function(){
+			deleteAll();
+		});
+		
 	});
 	
 	var menuId;
 	var menuPrice;
 	var result;
+	var index = 1;
 	
 	function selMenu() {
 		$.ajax({
 			url:"selectSaleMenu",
 			data:{menuName:$("#menuName").val()},
 			type:"Get",
-			success:function(resultMap) {
+			success: function(resultMap){
 				if(resultMap.menuId != 0) {
 					$("#menuId").val(resultMap.menuId);
 					menuId = resultMap.menuId;
@@ -76,9 +88,89 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			alert("Wrong Value");
 			$("#cashValue").val("");
 		} else {
-			var cardValue = parseInt(result)-parseInt(cashValue)
+			var cardValue = parseInt(result)-parseInt(cashValue);
+			alert(cardValue);
 			$("#cardValue").val(cardValue);
 		}
+	}
+	
+	function inputTempTable(){
+		var context = "";
+		var queryString = $("form[name=menuInfo]").serialize();
+		$.ajax({
+			type : "POST"
+			,url : "SaleTempRegist"
+			,data : queryString
+			,dataType : 'json'
+			,success : function(sale) {
+				
+				context += "<tr id='tempTr'><th scope='row'>"+ index+"</th>";
+				context += "<td>" + sale.menuName +"</td>";
+				context += "<td>" + menuId + "</td>"
+				context += "<td>" + sale.menuCount+"</td>";
+				context += "<td>" + sale.payDate + "</td>";
+				context += "<td>" + sale.cashValue +"</td>";
+				context += "<td>" + sale.cardValue +"</td>";
+				context += "<td><button onclick = 'deleteLine(this);' class='close' id='deleteLine'>x</button></td></tr>";
+
+				$("#temptable").append(context);
+				index++;
+			}
+			,error:function(error) {
+				alert("Server Error");
+			}
+		});
+	}
+	
+	function deleteLine(obj) {
+	    var tr = $(obj).parent().parent();
+	    //라인 삭제
+	    tr.remove();
+	}
+	
+	function deleteAll() {
+		//테이블 전체 삭제
+		$("#temptable").empty();
+		index = 1;
+	}
+	
+	function submitAll() {
+		var arrToSend = [];
+		var arrToSend1 =[];
+		
+		$("#temptable tr").each(function(){
+			var len = $(this).find('td').length;
+			
+			for(var i=0;i<len-1;i++) {
+					arrToSend.push($(this).find("td").eq(i).text());
+			}
+			arrToSend1.push(arrToSend);
+		});
+		
+		$.ajax({
+			contentType:"application/json"
+			,type:"post"
+			,data:JSON.stringify(arrToSend1)
+			,url:"SaleDBRegist"
+			,success:function(data){
+				console.log('done');
+			}
+			,error: function(jqXHR, textStatus, errorThrown) {
+				console.log('error while post');
+			}
+			,beforeSend:function(){
+		        $('.wrap-loading').removeClass('display-none');
+		    },
+		    complete:function(){
+		   		$('.wrap-loading').addClass('display-none');
+		   		alert("Sale List Saved");
+		   		location.replace('SaleSelect');
+		    },
+			error:function(error) {
+				alert("Server Error");
+			},
+			timeout:100000
+		});
 	}
 	
 </script>
@@ -128,27 +220,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</button>
 						<h1>
 							<a class="navbar-brand" href="/app"><span
-								class="fa fa-area-chart"></span>FOODTRUCK<span
+								class="fa fa-area-chart"></span> FOODTRUCK<span
 								class="dashboard_text">SCIT master 37th </span></a>
 						</h1>
 					</div>
 					<div class="collapse navbar-collapse"
 						id="bs-example-navbar-collapse-1">
 						<ul class="sidebar-menu">
-							<li class="header">MAIN NAVIGATION</li>
-							<li class="treeview"><a href="/app"> <i
-									class="fa fa-dashboard"></i> <span>Dashboard</span>
-							</a></li>
-							<li class="treeview"><a href="#"> <i
-									class="fa fa-folder"></i> <span>Examples</span> <i
-									class="fa fa-angle-left pull-right"></i>
-							</a>
-								<ul class="treeview-menu">
-									<li><a href="login"><i class="fa fa-angle-right"></i>
-											Login</a></li>
-									<li><a href="signup"><i class="fa fa-angle-right"></i>
-											Register</a></li>
-								</ul></li>
 							<!-- 프로젝트 메뉴 -->
 							<li class="treeview"><a href="#"> <i
 									class="fa fa-folder"></i> <span>Order Management</span> <i
@@ -196,95 +274,187 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<!-- main contents start -->
 		<div id="page-wrapper">
 			<div class="main-page">
+				<div class="col_3">
+					<div class="col-md-3 widget widget1">
+						<div class="r3_counter_box">
+							<i class="pull-left fa fa-dollar icon-rounded"></i>
+							<div class="stats">
+								<h5>
+									<strong>$452</strong>
+								</h5>
+								<span>Total Revenue</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 widget widget1">
+						<div class="r3_counter_box">
+							<i class="pull-left fa fa-laptop user1 icon-rounded"></i>
+							<div class="stats">
+								<h5>
+									<strong>$1019</strong>
+								</h5>
+								<span>Online Revenue</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 widget widget1">
+						<div class="r3_counter_box">
+							<i class="pull-left fa fa-money user2 icon-rounded"></i>
+							<div class="stats">
+								<h5>
+									<strong>$1012</strong>
+								</h5>
+								<span>Expenses</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 widget widget1">
+						<div class="r3_counter_box">
+							<i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>
+							<div class="stats">
+								<h5>
+									<strong>$450</strong>
+								</h5>
+								<span>Expenditure</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 widget">
+						<div class="r3_counter_box">
+							<i class="pull-left fa fa-users dollar2 icon-rounded"></i>
+							<div class="stats">
+								<h5>
+									<strong>1450</strong>
+								</h5>
+								<span>Total Users</span>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<br>
+				<!-- Temp Table -->
+				<div class="bs-example widget-shadow"
+					data-example-id="hoverable-table">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Menu Name</th>
+								<th>Menu Amount</th>
+								<th>Pay Date</th>
+								<th>Cash</th>
+								<th>Card</th>
+							</tr>
+						</thead>
+						<tbody id="temptable"></tbody>
+					</table>
+				</div>
+				<!-- //Temp Table -->
+
+				<div class="row text-center" style="width: 100%">
+					<div style="width: 30%; float: none; margin: 0 auto">
+						<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+						<button type="button" class="btn btn-primary" id="SaleDBRegist">Submit</button>
+						<!-- Indicates a dangerous or potentially negative action -->
+						<button type="button" class="btn btn-danger" id="SaleAllDelete">Reset</button>
+					</div>
+				</div>
 				<div class="forms">
 					<h2 class="title1">Sale Management</h2>
-					<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
-				<div class="row">
-					<div class="form-three widget-shadow">
-						<form class="form-horizontal" action = "SaleRegist" method = "post">
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Menu name</label>
-								<div class="col-sm-8">
-		                           <select name="menuName" id="menuName" class="form-control1">
-		                           	  <option>-----------</option>
-		                              <option>Sandwich</option>
-		                              <option>Hamburger</option>
-		                              <option>Cheeseburger</option>
-		                              <option>French fries</option>
-		                           </select>
-								</div>
-								<div>
-									<p class="help-block" ></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Menu amount</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control1" id="menuCount"
-										placeholder="Default Input" name="menuCount">
-								</div>
-								<div class="col-sm-2">
-									<p class="help-block">Dish Counts</p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Pay price</label>
-								<div class="col-sm-8">
-									<input disabled type="text" class="form-control1" id="result"
-										placeholder="Default Input">
-								</div>
-								<div class="col-sm-2">
-									<p class="help-block" id="message" style="color:red;"></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Pay Date</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control1" id="focusedinput"
-										placeholder="Default Input" name="payDate">
-								</div>
-								<div class="col-sm-2">
-									<p class="help-block">Payment Date</p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Cash</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control1" id="cashValue"
-										placeholder="0" name="cashValue">
-								</div>
-								<div class="col-sm-2">
-									<p class="help-block">Cash Payment Total</p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="focusedinput" class="col-sm-2 control-label">Card</label>
-								<div class="col-sm-8">
-									<input disabled type="text" class="form-control1" id="cardValue"
-										placeholder="0" name="cardValue">
-								</div>
-								<div class="col-sm-2">
-									<p class="help-block">Card Payment Total</p>
-								</div>
-							</div>										
-								<input type="hidden" id="menuId" name="menu_Id">
-								<input type="hidden" id="result" name="menu_Price">
-								 <div class="row text-center" style="width: 100%">
-				                    <div style="width: 30%; float:none; margin:0 auto" >
-									<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-									<button type = "submit" class = "btn btn-primary">Submit</button>
-									<!-- Indicates a dangerous or potentially negative action -->
-									<button type = "reset" class = "btn btn-danger">Cancel</button>
+					<div class="form-grids row widget-shadow"
+						data-example-id="basic-forms">
+						<div class="row">
+							<div class="form-three widget-shadow">
+								<form class="form-horizontal" id="menuInfo" name="menuInfo">
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Menu
+											name</label>
+										<div class="col-sm-8">
+											<select name="menuName" id="menuName" class="form-control1">
+												<option>-----------</option>
+												<option>Sandwich</option>
+												<option>Hamburger</option>
+												<option>Cheeseburger</option>
+												<option>French fries</option>
+											</select>
+										</div>
+										<div>
+											<p class="help-block"></p>
+										</div>
 									</div>
-								</div>
-							</form>
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Menu
+											amount</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control1" id="menuCount"
+												placeholder="Default Input" name="menuCount">
+										</div>
+										<div class="col-sm-2">
+											<p class="help-block">Dish Counts</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Pay
+											price</label>
+										<div class="col-sm-8">
+											<input disabled type="text" class="form-control1" id="result"
+												placeholder="Default Input">
+										</div>
+										<div class="col-sm-2">
+											<p class="help-block" id="message" style="color: red;"></p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Pay
+											Date</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control1" id="focusedinput"
+												placeholder="Default Input" name="payDate">
+										</div>
+										<div class="col-sm-2">
+											<p class="help-block">Payment Date</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Cash</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control1" id="cashValue"
+												placeholder="0" name="cashValue">
+										</div>
+										<div class="col-sm-2">
+											<p class="help-block">Cash Payment Total</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-2 control-label">Card</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control1" id="cardValue"
+												placeholder="0" name="cardValue">
+										</div>
+										<div class="col-sm-2">
+											<p class="help-block">Card Payment Total</p>
+										</div>
+									</div>
+									<input type="hidden" id="menuId" name="menu_Id"> <input
+										type="hidden" id="result" name="menu_Price">
+									<div class="row text-center" style="width: 100%">
+										<div style="width: 30%; float: none; margin: 0 auto">
+											<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+											<button type="button" class="btn btn-primary"
+												id="inputTempTable">Submit</button>
+											<!-- Indicates a dangerous or potentially negative action -->
+											<button type="reset" class="btn btn-danger">Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="clearfix"></div>
+		<div class="clearfix"></div>
 	<!-- //main contents ends -->
 			<!-- header-starts -->
 	<div class="sticky-header header-section ">

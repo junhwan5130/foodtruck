@@ -1,13 +1,18 @@
 package scit.webproject.app.repo;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
-import scit.webproject.app.dto.Menu;
+import org.apache.ibatis.session.RowBounds;
+
 import scit.webproject.app.dto.Sale;
 
 public interface SaleMapper {
 	
-	public int insertSale(Sale sale);
-	public Sale selectSaleMenu(Sale sale);
+	public int insertSale(List<Sale> saleList);	//Insert
+	public Sale selectSaleMenu(Sale sale);	//Mapper for Ajax
+	public ArrayList<Sale> selectAllSale(String searchWord, RowBounds rb);//Select All Sale Menu
+	public Sale deleteSaleMenu(Sale sale);	//Delete Sale Menu
+	public int selectCount(String searchWord);
 	
 }

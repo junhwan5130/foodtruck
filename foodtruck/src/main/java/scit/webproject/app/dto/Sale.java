@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class Sale {
+	private String saleSeq;
 	private String payDate;
 	private String menu_Id;
 	private String menuName;

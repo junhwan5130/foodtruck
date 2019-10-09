@@ -4,11 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="scit.webproject.app.repo.SaleMapper">
-	<insert id="insertSale" parameterType="Sale">
+	<insert id="insertSale" parameterType="java.util.List">
 	
 		INSERT INTO SALE
 		(
-			SALE_ID,
+			SALE_ID ,
 			SALE_DATE,
 			SALE_POINT,
 			SALE_CARD,
@@ -20,18 +20,20 @@
 			EMP_NAME
 		)
 		VALUES
+		<foreach item="item" index="index" collection="list" separator = " , ">
 		(
 			SALE_SEQ.NEXTVAL
-			,#{payDate}
-			,#{pointValue}
-			,#{cardValue}
-			,#{cashValue}
-			,#{menuName}
-			,#{menuCount}
-			,#{menu_Id}
-			,#{memberNo}
-			,#{memberName}
+			,#{item.payDate}
+			,#{item.pointValue}
+			,#{item.cardValue}
+			,#{item.cashValue}
+			,#{item.menuName}
+			,#{item.menuCount}
+			,#{item.menu_Id}
+			,#{item.memberNo}
+			,#{item.memberName}
 		)
+		</foreach>
 	</insert>
 	<select id="selectSaleMenu" parameterType="Sale" resultType="Sale">
 		SELECT
@@ -43,4 +45,37 @@
 			MENU_NAME = #{menuName}
 	</select>
 
+	<select id="selectAllSale" resultType="Sale" parameterType="String">
+
+		SELECT 
+			SALE_ID saleSeq
+			,SALE_DATE payDate
+			,MENU_NAME menuName
+			,MENU_AMOUNT menuCount
+			,EMP_NAME memberName
+			,SALE_POINT pointValue
+			,SALE_CARD cardValue
+			,SALE_CASH cashValue
+		FROM
+			SALE
+		<if test="_parameter!=null">
+		WHERE
+			MENU_NAME LIKE '%'||#{searchWord}||'%'
+		</if>
+		order by SALE_DATE desc
+		
+	</select>
+
+	<select id="selectCount" resultType="int" parameterType="String">
+	
+		SELECT COUNT(SALE_ID) FROM SALE
+		
+		<if test="_parameter!=null">
+		
+		WHERE
+			MENU_NAME LIKE '%'||#{searchWord}||'%'
+		
+		</if>
+	
+	</select>
 </mapper>

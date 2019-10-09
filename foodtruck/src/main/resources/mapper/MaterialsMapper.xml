@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="scit.webproject.app.dao.MaterialsMapper">
+  <insert id="insertMaterials" parameterType="Materials">
+  	insert into cookingmaterial
+  	(
+  	cm_id
+	,cm_name 
+	,cm_unit
+	,cm_amount
+	,cm_inputdate
+	,cm_expdate
+	,cm_origin
+	,cm_saftyStock
+	,cm_price
+	
+   		
+  	)
+  	values
+  	(
+  		cmseq.nextval,
+		#{cm_name}
+		,#{cm_unit}
+		,#{cm_amount}
+		,sysdate
+		,#{cm_expdate}
+		,#{cm_origin}
+		,#{cm_saftyStock}
+		,#{cm_price}
+		
+  	)
+  </insert>
+  
+  <delete id="deleteMaterials" parameterType="String">
+  	delete from cookingmaterial
+  	where
+  	cm_id=#{cm_id}
+  </delete>
+  
+  <update id="updateMaterials" parameterType="Materials">
+  	update cookingmaterial
+  	set
+  	cm_id=#{cm_id}
+	,cm_name=#{cm_name} 
+	,cm_unit=#{cm_unit}
+	,cm_amount=#{cm_amount}
+	,cm_inputdate=#{cm_inputdate}
+	<if test="cm_outdate!=null">
+	,cm_outdate
+	</if>
+	,cm_expdate
+	,cm_origin
+	,cm_saftyStock
+	<if test="cm_price!=null">
+	,cm_price
+	</if>
+	where
+		cm_id=#{cm_id}
+  </update>
+  
+  <select id="selectAllMaterials" resultType="Materials">
+  	select
+  		cm_id
+		,cm_name 
+		,cm_unit
+		,cm_amount
+		,to_char(cm_inputdate, 'yyyy-mm-dd') cm_inputdate
+		,to_char(cm_outdate, 'yyyy-mm-dd') cm_outdate
+		,to_char(cm_expdate, 'yyyy-mm-dd') cm_expdate
+		,cm_origin
+		,cm_saftyStock
+		,cm_price
+	from
+		cookingmaterial
+	order by cm_id asc
+		
+  </select>
+  
+  <select id="selectOneMaterials" parameterType="String" resultType="Materials">
+  select
+  		cm_id
+		,cm_name 
+		,cm_unit
+		,cm_amount
+		,cm_inputdate
+		,cm_outdate
+		,cm_expdate
+		,cm_origin
+		,cm_saftyStock
+		,cm_price
+	from
+		cookingmaterial
+	where
+		cm_id=#{cm_id}
+  </select>
+  
+  </mapper>

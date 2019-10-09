@@ -139,7 +139,7 @@ public class GotoController {
 	
 	@RequestMapping(value = "/OrderRegist", method = RequestMethod.GET)
 	public String OrderRegist() {
-		return "redirect:/selectAllCM";
+		return "OrderRegist";
 	}
 	
 	

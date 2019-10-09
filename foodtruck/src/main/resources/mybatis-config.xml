@@ -5,14 +5,14 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="OrderRegistVO" type="scit.webproject.app.vo.OrderRegistVO" /> 
-		<typeAlias alias="CMVO" type="scit.webproject.app.vo.CookingMaterialVO" /> 
-		
+<!-- 		<typeAlias alias="CMVO" type="scit.webproject.app.vo.CookingMaterialVO" /> 
+		 -->
 	</typeAliases>
 	
 	<mappers>
 	
 	<mapper resource="mapper/OrderRegistMapper.xml" />
-	<mapper resource="mapper/CookingMaterialMapper.xml" />
+	<!-- <mapper resource="mapper/CookingMaterialMapper.xml" /> -->
 	
 	</mappers>
 </configuration>

@@ -38,7 +38,38 @@ $(function(){
 </head>
 <body>
 
-<h1>[login] ${message} is on online!</h1>
+<div class="col-md-6 validation-grids validation-grids-right">
+							<div class="widget-shadow" data-example-id="basic-forms"> 
+								<div class="form-title">
+									<h4>Login</h4>
+								</div>
+								<div class="form-body">
+									<form data-toggle="validator">
+										<div class="form-group has-feedback">
+											<input type="text" class="form-control" name="emp_id" id="userid" placeholder="Enter Your ID" data-error="Bruh, that email address is invalid" required>
+											<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										</div>
+										<div class="form-group">
+											<input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+										</div>
+										<div class="bottom">
+											<div class="form-group">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+														Remember me
+													</label>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary disabled">Login</button>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+									</form>
+								</div>
+							</div>
 
 <form action="login" method="post" >
 

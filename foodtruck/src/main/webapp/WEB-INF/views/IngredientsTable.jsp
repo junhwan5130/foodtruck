@@ -440,9 +440,9 @@ $(function(){
 							</tr> 
 						</thead> 
 						<tbody> 
-						<c:forEach items="${list }" var="mtr">
+						<c:forEach items="${list }" var="mtr" varStatus="status">
 							<tr> 
-							<th scope="row">${mtr.cm_id}</th> 
+							<th scope="row">${status.count}</th> 
 							<td>${mtr.cm_name}</td> 
 							<td>${mtr.cm_unit}</td> 
 							<td>${mtr.cm_amount}</td> 

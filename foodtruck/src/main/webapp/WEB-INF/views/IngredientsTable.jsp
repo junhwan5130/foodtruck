@@ -458,7 +458,7 @@ $(function(){
 							</form>
 							<form action="updateM" method="post">
 							<input type="hidden" name="cm_id" value="${mtr.cm_id}">
-							<td><button type = "submit" class = "btn btn-warning">U</button></td>
+							<td><button type ="submit" class ="btn btn-warning">U</button></td>
 							</form>
 							
 							</tr> 

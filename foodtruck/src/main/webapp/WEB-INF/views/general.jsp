@@ -66,6 +66,34 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
               </li>
+              
+               <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Ingredients Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="IngredientsTable"><i class="fa fa-angle-right"></i>Ingredients Table</a></li>
+                  <li><a href="IngredientsInput"><i class="fa fa-angle-right"></i>Ingredients Input</a></li>
+                  <li><a href="IngredientsUpdate"><i class="fa fa-angle-right"></i>Ingredients Update</a></li>
+                  <li><a href="IngredientsDelete"><i class="fa fa-angle-right"></i>Ingredients Delete</a></li>
+                </ul>
+               </li>
+                <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Menu Management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="IngredientsTable"><i class="fa fa-angle-right"></i>Menu</a></li>
+                  <li><a href="IngredientsInput"><i class="fa fa-angle-right"></i>Menu Regist</a></li>
+                  <li><a href="IngredientsUpdate"><i class="fa fa-angle-right"></i>Menu Update</a></li>
+                  <li><a href="IngredientsDelete"><i class="fa fa-angle-right"></i>Menu Delete</a></li>
+                </ul>
+               </li>
+              
+              
+              
 			  <li class="treeview">
                 <a href="#">
                 <i class="fa fa-laptop"></i>

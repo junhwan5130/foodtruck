@@ -6,9 +6,11 @@
  	<typeAliases>
 		<typeAlias type="scit.webproject.app.dto.Employees" alias="Employees" />
 		<typeAlias type="scit.webproject.app.dto.Materials" alias="Materials" />
+		<typeAlias type="scit.webproject.app.dto.Menu" alias="Menu" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/EmployeesMapper.xml" />
 		<mapper resource="mapper/MaterialsMapper.xml" />
+		<mapper resource="mapper/MenuMapper.xml" />
 	</mappers>
 </configuration>

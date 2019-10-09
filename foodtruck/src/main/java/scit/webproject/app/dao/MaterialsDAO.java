@@ -40,11 +40,11 @@ public class MaterialsDAO {
 		return result;
 	}
 	
-	public int updateMaterials(Materials mtr){
+	public int updateMaterials(String cm_id){
 		int result=0;
 		MaterialsMapper mapper = sqlsession.getMapper(MaterialsMapper.class);
 		try {
-			result = mapper.updateMaterials(mtr);
+			result = mapper.updateMaterials(cm_id);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return result;

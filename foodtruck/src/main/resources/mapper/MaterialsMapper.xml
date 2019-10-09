@@ -43,20 +43,8 @@
   <update id="updateMaterials" parameterType="Materials">
   	update cookingmaterial
   	set
-  	cm_id=#{cm_id}
-	,cm_name=#{cm_name} 
-	,cm_unit=#{cm_unit}
-	,cm_amount=#{cm_amount}
-	,cm_inputdate=#{cm_inputdate}
-	<if test="cm_outdate!=null">
-	,cm_outdate
-	</if>
-	,cm_expdate
-	,cm_origin
-	,cm_saftyStock
-	<if test="cm_price!=null">
-	,cm_price
-	</if>
+  	cm_amount=0
+	,cm_outdate=sysdate
 	where
 		cm_id=#{cm_id}
   </update>

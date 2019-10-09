@@ -429,14 +429,14 @@ $(function(){
 							<th>Name</th> 
 							<th>Unit</th> 
 							<th>Amount</th> 
-							<th>Input Date</th> 
-							<th>Output Date</th> 
+							<th>In</th> 
+							<th>Out</th> 
 							<th>Expire Date</th>
 							<th>Origin</th> 
 							<th>Safty Stock</th>
 							<th>Price</th>
 							<th>Delete</th>
-							<th>Update</th>  
+							<th>Used</th>  
 							</tr> 
 						</thead> 
 						<tbody> 
@@ -458,7 +458,7 @@ $(function(){
 							</form>
 							<form action="updateM" method="post">
 							<input type="hidden" name="cm_id" value="${mtr.cm_id}">
-							<td><button type = "button" class = "btn btn-warning">U</button></td>
+							<td><button type = "submit" class = "btn btn-warning">U</button></td>
 							</form>
 							
 							</tr> 

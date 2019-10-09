@@ -55,12 +55,13 @@ public class MaterialsController {
 		mservice.deleteMaterials(cm_id);
 		return "redirect:/IngredientsTable";
 	}
-	
-	@RequestMapping(value="/updateMaterials", method=RequestMethod.POST)
-	public String updateMaterials(Materials mtr){
-		mservice.updateMaterials(mtr);
-		return "";
+	@RequestMapping(value="/updateM", method=RequestMethod.POST)
+	public String updateM(String cm_id){
+		mservice.updateMaterials(cm_id);
+		return "redirect:/IngredientsTable";
 	}
+	
+	
 	
 	@RequestMapping(value = "/IngredientsTable", method = RequestMethod.GET)
 	public String IngredientsTable(Model model) {

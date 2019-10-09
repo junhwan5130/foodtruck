@@ -16,8 +16,8 @@ public class MaterialsService {
 	public int insertMaterials(Materials mtr){
 		return mdao.insertMaterials(mtr);
 	}
-	public int updateMaterials(Materials mtr){
-		return mdao.updateMaterials(mtr);
+	public int updateMaterials(String cm_id){
+		return mdao.updateMaterials(cm_id);
 	}
 	public int deleteMaterials(String cm_id){
 		return mdao.deleteMaterials(cm_id);
